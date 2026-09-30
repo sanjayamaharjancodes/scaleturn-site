@@ -2,7 +2,7 @@
 
 Single-page company landing site for Scaleturn — Sanjay Maharjan's software
 studio (AI-assisted delivery of automation, document processing, and web
-engineering). Track-2 owned asset for MyAgentOrganization.
+engineering). Track-2 owned asset for mandala.
 
 ## How it works
 
