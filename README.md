@@ -14,10 +14,10 @@ engineering). Track-2 owned asset for mandala.
   Scaleturn properties, but is otherwise a fresh, lean stylesheet — no
   affiliate-banner, disclaimer-box, or table components carried over, since
   this page doesn't need them.
-- **No forms, no cookies, no analytics, no tracking.** The page only links
-  out (Upwork profile, `mailto:`, the guide site). Because it collects
-  nothing, there's no privacy policy page — the footer says so directly
-  instead of shipping a stub legal page with nothing behind it.
+- **No forms, no cookies, no ads on this domain's pages.** The page only
+  links out (Upwork profile, `mailto:`, the guide site) and counts views with
+  GoatCounter. `privacy.html` covers this domain and the AdSense disclosure
+  Google requires for the guide subdomains.
 - **Contact routes are external, not embedded.** "Work with us" links to the
   Upwork profile and a `mailto:` address — no contact form, no email
   collection on this domain.
