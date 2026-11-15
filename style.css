@@ -191,7 +191,7 @@ section + section { border-top: 1px solid var(--color-border); }
 .resource-card p { margin: 0; color: var(--color-text-muted); }
 
 .resource-card + .resource-card { margin-top: var(--space-3); }
-.resource-card ul { margin: var(--space-2) 0 0 0; padding-left: 1.2rem; color: var(--color-text-muted); }
+.resource-card ul { margin: var(--space-2) 0 0 0; padding-left: 1.2rem; color: var(--color-text-muted); text-align: left; }
 
 /* ---- Prose pages (about, contact) and measured-data tables ---- */
 .prose { max-width: var(--width-prose); }
