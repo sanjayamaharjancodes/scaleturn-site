@@ -47,7 +47,7 @@
         <p><a class="btn" href="https://scaleturn.itch.io/procedural-game-sfx" target="_blank" rel="noopener">Get the SFX pack</a></p>
       </div>
       <div class="card">
-        <h2>Royalty-free chiptune game music loops — 16 tracks, WAV and OGG, gapless</h2>
+        <h2>Royalty-free chiptune game music loops — 16 tracks, WAV and OGG, each a whole number of bars</h2>
         <p>Eight moods, two tracks each: title, overworld, battle, boss, puzzle, ambient, town and victory. WAV and OGG for every track. Each file is a whole number of bars long, so it repeats on the beat; the loop seam of every track is measured in the table below. Composition generator included.</p>
         <p><strong>USD&nbsp;8</strong> · free 3-track sampler on the page</p>
         <p><a class="btn" href="https://scaleturn.itch.io/chiptune-game-loops" target="_blank" rel="noopener">Get the loop pack</a></p>
@@ -131,9 +131,10 @@
           <tr><td>Length</td><td>0.03&nbsp;s to 1.31&nbsp;s per sound (median 0.27&nbsp;s); 71.8&nbsp;s of audio in total</td></tr>
           <tr><td>Level</td><td>Loudest peak in the pack is 0.891 of full scale (−1.0&nbsp;dBFS); no file clips</td></tr>
           <tr><td>Clicks at start and end</td><td>The first and last sample is exactly zero in all 205 files</td></tr>
-          <tr><td rowspan="3">Chiptune loops</td><td>Files and format</td><td>16 WAV files (44,100&nbsp;Hz, 16-bit, mono) plus 16 OGG files; 6.86&nbsp;s to 32.0&nbsp;s long</td></tr>
+          <tr><td rowspan="4">Chiptune loops</td><td>Files and format</td><td>16 WAV files (44,100&nbsp;Hz, 16-bit, mono) plus 16 OGG files; 6.86&nbsp;s to 32.0&nbsp;s long</td></tr>
           <tr><td>Loop length</td><td>Every file is exactly 8 bars at its tempo (4 bars for the two victory fanfares), to within 0.011&nbsp;ms, so the loop restarts on the beat</td></tr>
           <tr><td>Loop seam</td><td>The jump from the last sample back to the first is exactly zero in 12 of 16 loops. The other four jump by 0.020 to 0.058 of full scale: <code>ambient_night_01</code>, <code>ambient_night_02</code>, <code>overworld_bright_01</code> and <code>town_cozy_01</code>. In the two ambient loops that jump is larger than 99.9% of the track's own sample-to-sample steps, so a faint click at the loop point is possible there. The build script stops if any jump exceeds 0.35.</td></tr>
+          <tr><td>Quiet tail</td><td>11 of 16 loops end with 8.9 to 65.2&nbsp;ms below −60&nbsp;dBFS before the loop restarts; the other 5 play to the last sample. Because each file is a whole number of bars, the restart still lands on the beat.</td></tr>
           <tr><td rowspan="2">Icon pack</td><td>Files</td><td>79 SVG icons, all on the same 24×24 viewBox; 632 PNGs = 79 icons × 2 colours (black, white) × 4 sizes (32, 64, 128 and 256&nbsp;px)</td></tr>
           <tr><td>Icons per category</td><td>UI 25, misc 13, navigation 12, combat 10, stats 10, currency 9</td></tr>
           <tr><td rowspan="3">UI kit</td><td>Files</td><td>128 PNGs = 32 pieces × 4 themes (slate, wood, stone, parchment)</td></tr>

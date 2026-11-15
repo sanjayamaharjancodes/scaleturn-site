@@ -66,6 +66,6 @@ Live URL: https://scaleturn.com/
 ## Updating content
 
 No CMS — edit the `.html` files directly. The site grew from one page to
-five on 2026-11-15 (task md-004): AdSense reviews scaleturn.com as the site, and
-a one-page landing gave it too little to judge. Keep new content first-hand
-and checkable (measured, sourced, dated), not restated copy.
+five on 2026-11-15 (task md-004), so the domain itself shows what Scaleturn
+does. Keep new content first-hand and checkable (measured, sourced, dated),
+not restated copy.
