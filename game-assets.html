@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Game asset packs — icons, UI, VFX, SFX and chiptune loops | Scaleturn</title>
-<meta name="description" content="Royalty-free game sound effects, seamless chiptune music loops, and game source kits. Generated from code — no samples, no recordings. Free samplers on every pack.">
+<meta name="description" content="Royalty-free game sound effects, chiptune music loops, icons, UI pieces, VFX and a game source kit, generated from code. File counts, lengths and loop seams measured from each release zip.">
 <link rel="canonical" href="https://scaleturn.com/game-assets.html">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,10 @@
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#audio">Audio</a></li>
-        <li><a href="#visual">Visual</a></li>
-        <li><a href="#code">Source kits</a></li>
-        <li><a href="#games">Games</a></li>
+        <li><a href="/game-assets.html" aria-current="page">Game assets</a></li>
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -28,7 +28,8 @@
 <section class="hero">
   <div class="container">
     <h1>Royalty-free game assets, generated from code</h1>
-    <p>Sound effects, seamless music loops and complete source kits. No samples, no recordings, no generative audio models — every asset is the deterministic output of a program, and that program ships with the pack. Free samplers on everything.</p>
+    <p>Sound effects, music loops, icons, interface pieces, visual effects and a complete game source kit. No samples, no recordings, no generative audio models — every asset is the deterministic output of a program, and that program ships with the pack. Free samplers on everything.</p>
+    <p class="note" style="margin-top:1rem">On this page: <a href="#audio">Audio</a> · <a href="#visual">Visual</a> · <a href="#code">Source kits</a> · <a href="#games">Play free</a> · <a href="#measured">Measured from the release files</a></p>
   </div>
 </section>
 
@@ -47,7 +48,7 @@
       </div>
       <div class="card">
         <h2>Royalty-free chiptune game music loops — 16 tracks, WAV and OGG, gapless</h2>
-        <p>Eight moods, two tracks each: title, overworld, battle, boss, puzzle, ambient, town and victory. WAV and OGG for every track. Loops are genuinely seamless — the build measures the discontinuity at the loop point and fails unless it is zero. Composition generator included.</p>
+        <p>Eight moods, two tracks each: title, overworld, battle, boss, puzzle, ambient, town and victory. WAV and OGG for every track. Each file is a whole number of bars long, so it repeats on the beat; the loop seam of every track is measured in the table below. Composition generator included.</p>
         <p><strong>USD&nbsp;8</strong> · free 3-track sampler on the page</p>
         <p><a class="btn" href="https://scaleturn.itch.io/chiptune-game-loops" target="_blank" rel="noopener">Get the loop pack</a></p>
       </div>
@@ -70,7 +71,7 @@
       </div>
       <div class="card">
         <h2>Fantasy game UI kit — 32 pieces in 4 themes, 128 PNGs with nine-slice data</h2>
-        <p>Panels, buttons, bars, frames and sliders in four visual themes, with nine-slice insets recorded in the manifest so every piece scales cleanly in-engine.</p>
+        <p>Buttons, controls, panels, bars and slots in four visual themes, with nine-slice insets recorded in the manifest so every piece scales cleanly in-engine.</p>
         <p><strong>USD&nbsp;6</strong> · pay what you want above</p>
         <p><a class="btn" href="https://scaleturn.itch.io/game-ui-kit" target="_blank" rel="noopener">Get the UI kit</a></p>
       </div>
@@ -117,21 +118,52 @@
   </div>
 </section>
 
+<section id="measured">
+  <div class="container prose" style="margin:0 auto">
+    <h2>Measured from the release files</h2>
+    <p>On 15 November 2026 we opened each pack's release zip — the archive a buyer downloads — with a short Python script (the standard <code>zipfile</code> and <code>wave</code> modules), and counted and measured what is inside. These are file measurements, not listening tests. Anyone with the pack can repeat them.</p>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Pack</th><th>What we measured</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="5">Procedural SFX</td><td>Files and format</td><td>205 WAV files, every one 44,100&nbsp;Hz, 16-bit, mono</td></tr>
+          <tr><td>Sounds per family</td><td>UI 34, pickups 16, weapons 16, progress 15, impact 14, machines 14, retro 14, board 12, creatures 12, nature 12, objects 12, text 12, transitions 12, casual 10</td></tr>
+          <tr><td>Length</td><td>0.03&nbsp;s to 1.31&nbsp;s per sound (median 0.27&nbsp;s); 71.8&nbsp;s of audio in total</td></tr>
+          <tr><td>Level</td><td>Loudest peak in the pack is 0.891 of full scale (−1.0&nbsp;dBFS); no file clips</td></tr>
+          <tr><td>Clicks at start and end</td><td>The first and last sample is exactly zero in all 205 files</td></tr>
+          <tr><td rowspan="3">Chiptune loops</td><td>Files and format</td><td>16 WAV files (44,100&nbsp;Hz, 16-bit, mono) plus 16 OGG files; 6.86&nbsp;s to 32.0&nbsp;s long</td></tr>
+          <tr><td>Loop length</td><td>Every file is exactly 8 bars at its tempo (4 bars for the two victory fanfares), to within 0.011&nbsp;ms, so the loop restarts on the beat</td></tr>
+          <tr><td>Loop seam (jump from the last sample back to the first)</td><td>Exactly zero in 12 of 16 loops. The other four jump by 0.020 to 0.058 of full scale: <code>ambient_night_01</code>, <code>ambient_night_02</code>, <code>overworld_bright_01</code> and <code>town_cozy_01</code>. In the two ambient loops that jump is larger than 99.9% of the track's own sample-to-sample steps, so a faint click at the loop point is possible there. The build script stops if any jump exceeds 0.35.</td></tr>
+          <tr><td rowspan="2">Icon pack</td><td>Files</td><td>79 SVG icons, all on a <code>0 0 24 24</code> grid; 632 PNGs = 79 icons × 2 colours (black, white) × 4 sizes (32, 64, 128 and 256&nbsp;px)</td></tr>
+          <tr><td>Icons per category</td><td>UI 25, misc 13, navigation 12, combat 10, stats 10, currency 9</td></tr>
+          <tr><td rowspan="3">UI kit</td><td>Files</td><td>128 PNGs = 32 pieces × 4 themes (slate, wood, stone, parchment)</td></tr>
+          <tr><td>Pieces per theme</td><td>12 buttons, 6 controls, 5 panels, 5 bars, 4 slots</td></tr>
+          <tr><td>Nine-slice data</td><td>All 128 manifest entries carry left, top, right and bottom insets in pixels</td></tr>
+          <tr><td rowspan="2">VFX pack</td><td>Frames</td><td>281 transparent PNG frames across 18 effects, 12 to 20 frames each; 225 frames are 192×192&nbsp;px and 56 are 128×128&nbsp;px</td></tr>
+          <tr><td>Extras</td><td>One sprite sheet and one strip per effect (18 + 18 PNGs)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Prices on this page were read from each itch.io page on 15 November 2026. itch.io handles checkout; prices there are the ones that apply.</p>
+  </div>
+</section>
+
 <section class="cta-block">
   <div class="container">
     <h2>Why &ldquo;generated from code&rdquo; matters</h2>
     <p>Because it makes the licence simple and the provenance checkable. Nothing in these packs was recorded, sampled or produced by a generative audio model — so there is no third-party rights holder anywhere in the chain, and no training data embedded in the files. The source that produced every asset is in the download, which means you can audit it, change it, and rebuild the library yourself.</p>
     <div class="cta-buttons">
       <a class="btn" href="https://scaleturn.itch.io/" target="_blank" rel="noopener">All packs on itch.io</a>
-      <a class="btn btn-secondary" href="mailto:sanjayamaharjan.codes@gmail.com">Ask a question</a>
+      <a class="btn btn-secondary" href="/contact.html">Ask a question</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container">
+    <p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
     <p>&copy; 2026 Scaleturn &middot; Bhaktapur, Nepal</p>
-    <p>This site uses GoatCounter for privacy-friendly page counts. No cookies, no personal data, no third-party ad tracking. <a href="/privacy.html">Privacy policy</a></p>
+    <p>This site uses GoatCounter for privacy-friendly page counts. No cookies, no personal data, no third-party ad tracking.</p>
   </div>
 </footer>
 

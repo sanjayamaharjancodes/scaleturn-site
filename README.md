@@ -7,13 +7,15 @@ engineering). Track-2 owned asset for mandala.
 ## How it works
 
 - **Plain static HTML + one CSS file.** No build step, no framework, no
-  JavaScript. `index.html` is the entire site — one page, anchor-linked
-  sections (`#services`, `#work-with-us`, `#resources`).
+  JavaScript (apart from the GoatCounter snippet). Five pages: `index.html`,
+  `game-assets.html`, `about.html`, `contact.html`, `privacy.html`. Every page
+  carries the same nav (Home, Game assets, Guides, About, Contact) and the
+  same footer (About, Contact, Privacy); edit all five when either changes.
 - **`style.css`** reuses the design tokens (colors, spacing, type scale) from
   the sibling `getting-paid-nepal` guide site for visual consistency across
   Scaleturn properties, but is otherwise a fresh, lean stylesheet — no
-  affiliate-banner, disclaimer-box, or table components carried over, since
-  this page doesn't need them.
+  affiliate-banner or disclaimer-box components carried over. It has one
+  small `table.data` style for the measured-pack table on `game-assets.html`.
 - **No forms, no cookies, no ads on this domain's pages.** The page only
   links out (Upwork profile, `mailto:`, the guide site) and counts views with
   GoatCounter. `privacy.html` covers this domain and the AdSense disclosure
@@ -28,14 +30,22 @@ engineering). Track-2 owned asset for mandala.
 2. Services — three fixed-scope service categories (AI/LLM integration,
    document & back-office automation, legacy migration & web engineering).
 3. Work with us — Upwork profile link + `mailto:` link.
-4. Resources — link out to `gettingpaid.scaleturn.com`, the free guide site.
-5. Footer — copyright, location, no-data-collected note.
+4. Game assets — three product cards; the full list is `game-assets.html`.
+5. Guides (`#guides`) — deep links into `gettingpaid.scaleturn.com` and
+   `scrapetools.scaleturn.com`, the two free guide sites.
+6. Footer — About/Contact/Privacy links, copyright, location, no-data note.
+
+`game-assets.html` has a "Measured from the release files" table (#measured).
+Every figure in it was measured on 2026-11-15 from each pack's release zip
+(`<pack repo>/out/dist/*.zip`) by `measure_packs.py`, kept with the md-004
+proof in the org memory repo. Re-run it after a pack is rebuilt and update the
+table; prices come from each itch.io page.
 
 ## SEO basics in place
 
 - `<title>` and `<meta name="description">`.
 - `<link rel="canonical">`.
-- `robots.txt` + `sitemap.xml` (single URL — this is a one-page site).
+- `robots.txt` + `sitemap.xml` (all five pages, with `lastmod`).
 - Mobile-friendly (responsive viewport meta, CSS breakpoint).
 - No JS, no web fonts, no blocking render — fast by default.
 
@@ -55,7 +65,7 @@ Live URL: https://scaleturn.com/
 
 ## Updating content
 
-No CMS — edit `index.html` directly. If the page grows past one screen's
-worth of sections, reconsider before adding a second page; the "single-page
-landing" framing is a deliberate scope choice, not an MVP shortcut to later
-expand without reconsidering.
+No CMS — edit the `.html` files directly. The site grew from one page to
+five on 2026-11-15 (task md-004): AdSense reviews scaleturn.com as the site, and
+a one-page landing gave it too little to judge. Keep new content first-hand
+and checkable (measured, sourced, dated), not restated copy.
