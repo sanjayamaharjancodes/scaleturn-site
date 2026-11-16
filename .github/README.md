@@ -18,8 +18,9 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
 - **AdSense code on every page.** Each page's `<head>` carries the AdSense code snippet
   (`client=ca-pub-5554189148912369`, the id in `ads.txt`), and `index.html` also keeps the `google-adsense-account`
   meta tag. Copy both into any new page. `privacy.html` makes the AdSense disclosures (Google's cookies, other ad
-  companies, opt-out links). The guide subdomains load no ad code. No forms and no first-party cookies: contact is
-  a `mailto:` link and the Upwork profile.
+  companies, opt-out links). The guide subdomains load no ad code. No forms. The site's own code sets no cookies,
+  but the AdSense code can set Google cookies (such as `_gads`) on this domain. Contact is a `mailto:` link and the
+  Upwork profile.
 
 ## Content rules
 
