@@ -8,14 +8,18 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
 
 ## How it works
 
-- **Plain static HTML and one CSS file.** No build step, no framework, no JavaScript apart from the GoatCounter
-  page counter. Five pages: `index.html`, `game-assets.html`, `about.html`, `contact.html`, `privacy.html`.
+- **Plain static HTML and one CSS file.** No build step, no framework. The only scripts are the GoatCounter page
+  counter and Google's AdSense code. Five pages: `index.html`, `game-assets.html`, `about.html`, `contact.html`,
+  `privacy.html`, plus `favicon.ico`.
 - **One nav and one footer, copied by hand.** Every page carries the same nav (Home, Game assets, Guides, About,
   Contact) and footer (About, Contact, Privacy). Edit all five pages when either changes.
 - **`style.css`** holds design tokens first, then components, then one mobile breakpoint. `table.data` styles the
   measured-pack table on `game-assets.html`.
-- **No forms, no cookies, no ads on this domain.** Contact is a `mailto:` link and the Upwork profile.
-  `privacy.html` covers this domain and the advertising disclosure for the guide subdomains.
+- **AdSense code on every page.** Each page's `<head>` carries the AdSense code snippet
+  (`client=ca-pub-5554189148912369`, the id in `ads.txt`), and `index.html` also keeps the `google-adsense-account`
+  meta tag. Copy both into any new page. `privacy.html` makes the AdSense disclosures (Google's cookies, other ad
+  companies, opt-out links). The guide subdomains load no ad code. No forms and no first-party cookies: contact is
+  a `mailto:` link and the Upwork profile.
 
 ## Content rules
 
