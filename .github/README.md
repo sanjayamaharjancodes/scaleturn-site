@@ -9,8 +9,11 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
 ## How it works
 
 - **Plain static HTML and one CSS file.** No build step, no framework. The only scripts are the GoatCounter page
-  counter and Google's AdSense code. Five pages: `index.html`, `game-assets.html`, `about.html`, `contact.html`,
+  counter and Google's AdSense code. Five site pages: `index.html`, `game-assets.html`, `about.html`, `contact.html`,
   `privacy.html`, plus `favicon.ico`.
+- **One product landing page, `ats-job-feed/index.html`** (served at `/ats-job-feed/`). It keeps its own inline styles
+  and has no site nav; its footer links Home, About, Contact and Privacy and carries the GoatCounter and AdSense line.
+  Its head and counter follow the rules below.
 - **One nav and one footer, copied by hand.** Every page carries the same nav (Home, Game assets, Guides, About,
   Contact) and footer (About, Contact, Privacy). Edit all five pages when either changes.
 - **`style.css`** holds design tokens first, then components, then one mobile breakpoint. `table.data` styles the
@@ -31,7 +34,7 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
 ## SEO basics
 
 - `<title>`, `<meta name="description">` and `<link rel="canonical">` on every page.
-- `robots.txt` and `sitemap.xml` (all five pages, with `lastmod`).
+- `robots.txt` and `sitemap.xml` (every page, with `lastmod`).
 - Responsive viewport and a CSS breakpoint; no web fonts.
 
 ## Deployment

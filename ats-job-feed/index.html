@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Job Feed: Greenhouse, Lever, Ashby and Workable jobs in one schema</title>
+<meta name="description" content="Read every open job from company career sites on Greenhouse, Lever, Ashby and Workable in one schema. Open-source library, or a hosted feed of new jobs on Apify.">
+<link rel="canonical" href="https://scaleturn.com/ats-job-feed/">
+<meta name="google-adsense-account" content="ca-pub-5554189148912369">
+<link rel="icon" href="/favicon.ico">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5554189148912369" crossorigin="anonymous"></script>
+<meta property="og:title" content="ATS Job Feed: Greenhouse, Lever, Ashby and Workable jobs in one schema">
+<meta property="og:description" content="Open-source library and hosted feed that read the public job-board APIs of four applicant tracking systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaleturn.com/ats-job-feed/">
+<style>
+:root { --bg:#0b1220; --panel:#111b2e; --line:#1f2c47; --text:#f8fafc; --muted:#94a3b8; --accent:#5eead4; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:860px; margin:0 auto; padding:48px 20px 72px; }
+h1 { font-size:2.1rem; line-height:1.2; margin:0 0 16px; }
+h2 { font-size:1.3rem; margin:44px 0 12px; }
+p { margin:0 0 14px; }
+a { color:var(--accent); }
+.lead { font-size:1.15rem; color:#dbe4f0; }
+.muted { color:var(--muted); font-size:.92rem; }
+.buttons { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 8px; }
+.button { display:inline-block; padding:12px 20px; border-radius:8px; font-weight:600; text-decoration:none; border:1px solid var(--accent); }
+.button.primary { background:var(--accent); color:#06231f; }
+.button.secondary { color:var(--accent); }
+main { overflow-wrap:break-word; }
+.scroll { overflow-x:auto; }
+pre { max-width:100%; }
+table { width:100%; border-collapse:collapse; margin:8px 0 16px; font-size:.95rem; }
+th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+pre { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; overflow-x:auto; font:14px/1.5 ui-monospace,"JetBrains Mono",Consolas,monospace; }
+code { font-family:ui-monospace,"JetBrains Mono",Consolas,monospace; font-size:.92em; }
+ul { padding-left:22px; margin:0 0 14px; }
+li { margin-bottom:6px; }
+footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<main>
+<h1>ATS Job Feed: Greenhouse, Lever, Ashby and Workable jobs in one schema</h1>
+<p class="lead">Give it a list of companies. It reads each company's public job board on Greenhouse, Lever, Ashby or Workable and returns one row per open job, with the same fields for every applicant tracking system (ATS): title, location, remote flag, salary where published, description and apply link.</p>
+<p>No login, API key, browser or proxy is needed. It uses the job-board APIs the four vendors publish for careers pages.</p>
+
+<div class="buttons">
+<a class="button primary" href="https://apify.com/scaleturn/career-site-job-feed?utm_source=scaleturn&utm_medium=landing&utm_campaign=landing-ats-job-feed" data-goatcounter-click="store/apify-career-site-job-feed-scaleturn-atsjobfeed" data-goatcounter-title="Apify Store: ATS job feed (ATS job feed page)">Run the hosted feed on Apify</a>
+<a class="button secondary" href="https://github.com/sanjayamaharjancodes/ats-job-feed?utm_source=scaleturn&utm_medium=landing&utm_campaign=landing-ats-job-feed" data-goatcounter-click="project/github-ats-job-feed-scaleturn-atsjobfeed" data-goatcounter-title="GitHub: ats-job-feed library (ATS job feed page)">Get the open-source library</a>
+</div>
+<p class="muted">Not affiliated with or endorsed by Greenhouse, Lever, Ashby or Workable.</p>
+
+<h2>Who it is for</h2>
+<ul>
+<li><strong>Job boards and aggregators.</strong> Fill a niche board with the open roles of a list of target companies. A daily run adds the new jobs and tells you which ones have closed.</li>
+<li><strong>Recruiting and sales tools.</strong> Watch which companies are hiring, for which roles and where.</li>
+<li><strong>Market research.</strong> Track hiring by company, department, location or remote share over time.</li>
+</ul>
+
+<h2>Two ways to use it</h2>
+<div class="scroll"><table>
+<thead><tr><th></th><th>Open-source library</th><th>Hosted feed on Apify</th></tr></thead>
+<tbody>
+<tr><td>Reads the four ATSs into one schema</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Finds the ATS from a board link, a careers page or a company name</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Title, location, remote and date filters</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Runs on</td><td>Your machine (Node.js 20 or later)</td><td>Apify's platform</td></tr>
+<tr><td>Only-new-jobs mode with saved state</td><td>No</td><td>Yes</td></tr>
+<tr><td>Closed-job notices</td><td>No</td><td>Yes, free</td></tr>
+<tr><td>Schedules, webhooks, API, integrations</td><td>No</td><td>Yes</td></tr>
+<tr><td>Price</td><td>Free, MIT licence</td><td>USD 2 per 1,000 jobs returned (USD 1.40 to 1.80 on paid Apify plans) and USD 1 per 1,000 company boards checked, plus Apify's start fee</td></tr>
+</tbody>
+</table></div>
+
+<h2>What one job looks like</h2>
+<pre><code>{
+  "id": "greenhouse:discord:8917177002",
+  "ats": "greenhouse",
+  "company": "Discord",
+  "title": "Associate Commercial Counsel",
+  "location": "San Francisco Bay Area or Remote (U.S.)",
+  "remote": true,
+  "department": "Legal",
+  "employmentType": null,
+  "salary": null,
+  "postedAt": "2026-11-03T16:27:16.000Z",
+  "jobUrl": "https://job-boards.greenhouse.io/discord/jobs/8917177002",
+  "applyUrl": "https://job-boards.greenhouse.io/discord/jobs/8917177002",
+  "description": "Discord has a highly engaged community ..."
+}</code></pre>
+<p>The <code>id</code> stays the same from run to run, so a monitor only needs to remember the ids it has seen.</p>
+
+<h2>How it was checked</h2>
+<ul>
+<li>On 7 November 2026 it was run on 33 real company boards: 10 Greenhouse, 8 Lever, 9 Ashby and 6 Workable. For every board, the number of jobs returned equalled the number of postings in that ATS's own public API, and every job id was unique.</li>
+<li>That run returned 3,204 jobs. Three full runs over the same boards took 14 to 35 seconds on one machine.</li>
+<li>Only-new-jobs mode was checked on the same boards: the first run returned all 3,204 jobs and a second run straight after returned none.</li>
+<li>The library has 42 automated tests that run against recorded responses from each ATS.</li>
+</ul>
+
+<h2>Limits</h2>
+<ul>
+<li>Only these four ATSs. Workday, SmartRecruiters, iCIMS, Taleo, SuccessFactors and Teamtailor are not supported, and neither are LinkedIn or Indeed.</li>
+<li>It reads the companies you list. It does not search all jobs on the web by keyword.</li>
+<li>A bare company name is a best guess and is flagged in the run report. A board link is exact.</li>
+<li>Greenhouse boards hosted in its EU region are not covered. Lever EU boards need a <code>jobs.eu.lever.co</code> link.</li>
+<li>The vendors can change or withdraw their public APIs at any time.</li>
+</ul>
+
+<footer>
+<p class="muted">ATS Job Feed is published by MakeYeti, an independent product studio (<a href="https://x.com/makeyeti?utm_source=scaleturn&utm_medium=landing&utm_campaign=landing-ats-job-feed" data-goatcounter-click="profile/x-makeyeti-scaleturn-atsjobfeed" data-goatcounter-title="X: @makeyeti (ATS job feed page)">@makeyeti</a> on X). The code was written with AI coding agents and is checked by its test suite. How you use job data is your responsibility; this page is not legal advice.</p>
+<p class="muted"><a href="/">Scaleturn home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
+<p class="muted">Page counts use GoatCounter, which sets no cookies. This site loads Google AdSense code, so Google and its partners may use cookies to show and measure ads. See the <a href="/privacy.html">privacy policy</a>.</p>
+</footer>
+</main>
+<script>window.goatcounter = {path: function(p) { return location.host + p }}</script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
