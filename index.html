@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scaleturn — AI-Assisted Software Delivery</title>
-<meta name="description" content="Scaleturn is Sanjay Maharjan's software studio: AI-assisted delivery of automation, document processing, and web engineering. Fixed scope, reviewed by a human.">
+<meta name="description" content="Scaleturn, Sanjay Maharjan's software studio: first-hand data from its own index of company job boards, and AI-assisted automation and web engineering.">
 <link rel="canonical" href="https://scaleturn.com/">
 <meta name="google-adsense-account" content="ca-pub-5554189148912369">
 <link rel="icon" href="/favicon.ico">
@@ -19,6 +19,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
         <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/#data">Data</a></li>
         <li><a href="/game-assets.html">Game assets</a></li>
         <li><a href="/#guides">Guides</a></li>
         <li><a href="/about.html">About</a></li>
@@ -31,7 +32,36 @@
 <section class="hero">
   <div class="container">
     <h1>Software that pays for itself. Built fast, reviewed by a human.</h1>
-    <p>Scaleturn is Sanjay Maharjan's software studio — AI-assisted delivery of automation, document processing, and web engineering, scoped and priced up front.</p>
+    <p>Scaleturn is Sanjay Maharjan's software studio — AI-assisted delivery of automation, document processing, and web engineering, scoped and priced up front. It also publishes what its own job index measures: three reports below, each with its data.</p>
+  </div>
+</section>
+
+<section id="data">
+  <div class="container">
+    <div class="section-title">
+      <h2>Original data</h2>
+      <p>Counted from the job index behind ATS Jobs Search, made by Scaleturn. It reads employers' own career pages on six applicant tracking systems (ATS). Each report gives its method and limits, and a CSV to check it against.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card data-card">
+        <p class="data-date">Crawl data: 18 and 19 Nov 2026</p>
+        <h3><a href="https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html">Public ATS job posting APIs: what a crawl of 30,928 board addresses found</a></h3>
+        <p>The public job posting APIs of Greenhouse, Lever, Ashby, Recruitee and Personio are dependable once you know a board exists: on 19 Nov they returned a job list for 19,768 of 19,805 known boards (99.8%), with no API key. The waste is in finding boards: 36.0% of 30,928 board addresses taken from Common Crawl answered "not a board". Workable stopped answering after 3,834 to 3,840 boards in each pass, with an HTTP 429 asking for a 24-hour wait.</p>
+        <p><a href="https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html">Read the crawl report</a> &middot; <a href="https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv">CSV</a></p>
+      </article>
+      <article class="card data-card">
+        <p class="data-date">Job index built: 19 Nov 2026</p>
+        <h3><a href="https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html">What day are most jobs posted? Four weeks of new jobs on 12,228 company job boards</a></h3>
+        <p>Tuesday, but only just, and not every week. Of 117,153 jobs posted from 19 Oct to 15 Nov 2026 and still open on 19 Nov, 20.7% fell on a Tuesday once the jobs that had closed are allowed for, against 18.6% to 19.9% on each other weekday and 2.9% across Saturday and Sunday. Tuesday led in 3 of the 4 weeks. 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
+        <p><a href="https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html">Read the posting-day report</a> &middot; <a href="https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv">CSV</a></p>
+      </article>
+      <article class="card data-card">
+        <p class="data-date">Job index built: 19 Nov 2026</p>
+        <h3><a href="https://scrapetools.scaleturn.com/ai-job-titles.html">AI job titles: what 3,958 company job boards actually post</a></h3>
+        <p>Of 456,681 open jobs on 18,770 boards on 19 Nov 2026, 19,600 (4.29%) have a title that names AI or machine learning. Machine Learning Engineer (on 556 boards, counting "ML Engineer") and AI Engineer (539) lead. Almost a quarter of those listings (23.1%) are AI-training and data gigs from just 41 boards. And Forward Deployed Engineer, a title without the word AI, is on more boards (563) than any title that names it.</p>
+        <p><a href="https://scrapetools.scaleturn.com/ai-job-titles.html">Read the AI job titles report</a> &middot; <a href="https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.csv">CSV</a></p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -123,11 +153,10 @@
     <div class="resource-card">
       <div>
         <h3><a href="https://scrapetools.scaleturn.com/">ScrapeTools</a></h3>
-        <p>Web scraping API prices taken from each vendor's own pricing page, each with the date it was checked, and calculators that turn them into a monthly bill. Drafted with AI tools and checked by an automated reviewer. Has affiliate links.</p>
+        <p>Home of the three data reports above. It also lists web scraping API prices taken from each vendor's own pricing page, each with the date it was checked, and calculators that turn them into a monthly bill. The price pages are drafted with AI tools and checked by an automated reviewer, and some carry affiliate links.</p>
         <ul>
           <li><a href="https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html">What a web scraping API costs per 1,000 requests</a></li>
           <li><a href="https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html">ScraperAPI credits and pricing calculator</a></li>
-          <li><a href="https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html">Web scraping APIs with a free tier</a></li>
           <li><a href="https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html">Which web scraping API charges least per request</a></li>
           <li><a href="https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee: pricing, credits and limits</a></li>
         </ul>

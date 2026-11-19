@@ -14,14 +14,19 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
 - **One product landing page, `ats-job-feed/index.html`** (served at `/ats-job-feed/`). It keeps its own inline styles
   and has no site nav; its footer links Home, About, Contact and Privacy and carries the GoatCounter and AdSense line.
   Its head and counter follow the rules below.
-- **One nav and one footer, copied by hand.** Every page carries the same nav (Home, Game assets, Guides, About,
+- **One nav and one footer, copied by hand.** Every page carries the same nav (Home, Data, Game assets, Guides, About,
   Contact) and footer (About, Contact, Privacy). Edit all five pages when either changes.
+- **The home page leads with original data** (`#data`, since 19 Nov 2026, task ct-004): one card per report on
+  scrapetools.scaleturn.com that is measured from Scaleturn's own job index, with its date, a summary and links to
+  the report and its CSV. Every figure in a card is copied from that report's short answer; when a report is rebuilt,
+  update its card. The ScrapeTools repository's `ct-004/check_live.py` checks the figures against the report pages.
 - **`style.css`** holds design tokens first, then components, then one mobile breakpoint. `table.data` styles the
-  measured-pack table on `game-assets.html`.
+  measured-pack table on `game-assets.html`; `.data-card` the home page's data cards.
 - **AdSense code on every page.** Each page's `<head>` carries the AdSense code snippet
   (`client=ca-pub-5554189148912369`, the id in `ads.txt`), and `index.html` also keeps the `google-adsense-account`
   meta tag. Copy both into any new page. `privacy.html` makes the AdSense disclosures (Google's cookies, other ad
-  companies, opt-out links). The guide subdomains load no ad code. No forms. The site's own code sets no cookies,
+  companies, opt-out links, Google's EU consent requirement). Both guide subdomains, ScrapeTools and Getting Paid
+  Nepal, load the same AdSense code since 19 Nov 2026 (task ct-004); this site's `ads.txt` covers them. No forms. The site's own code sets no cookies,
   but the AdSense code can set Google cookies (such as `__gads`) on this domain. Contact is a `mailto:` link and the
   Upwork profile.
 

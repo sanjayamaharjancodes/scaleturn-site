@@ -143,6 +143,12 @@ section + section { border-top: 1px solid var(--color-border); }
 .card h3, .card h2 { margin-bottom: var(--space-2); font-size: 1.17em; }
 .card p { margin-bottom: 0; color: var(--color-text-muted); }
 
+/* ---- Original-data cards (home page): date line, title, summary, links ---- */
+.data-card { display: flex; flex-direction: column; }
+.data-card .data-date { font-size: var(--font-size-sm); margin-bottom: var(--space-2); }
+.data-card p + p { margin-top: var(--space-3); }
+.data-card p:last-child { margin-top: auto; padding-top: var(--space-3); }
+
 /* ---- Work-with-us block ---- */
 .cta-block {
   background: var(--color-bg-alt);
