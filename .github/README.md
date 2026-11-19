@@ -22,10 +22,11 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
   update its card. The ScrapeTools repository's `ct-004/check_live.py` checks the figures against the report pages.
 - **`style.css`** holds design tokens first, then components, then one mobile breakpoint. `table.data` styles the
   measured-pack table on `game-assets.html`; `.data-card` the home page's data cards.
-- **AdSense code on every page.** Each page's `<head>` carries the AdSense code snippet
+- **AdSense code on every page except `privacy.html`.** Each page's `<head>` carries the AdSense code snippet
   (`client=ca-pub-5554189148912369`, the id in `ads.txt`), and `index.html` also keeps the `google-adsense-account`
   meta tag. Copy both into any new page. `privacy.html` makes the AdSense disclosures (Google's cookies, other ad
-  companies, opt-out links, Google's EU consent requirement). Both guide subdomains, ScrapeTools and Getting Paid
+  companies, opt-out links, Google's EU consent requirement) and loads no ad code, since 19 Nov 2026: Google asks
+  that privacy pages linked from its consent message host no ad tags (AdSense Help, answer 10961370). Both guide subdomains, ScrapeTools and Getting Paid
   Nepal, load the same AdSense code since 19 Nov 2026 (task ct-004); this site's `ads.txt` covers them. No forms. The site's own code sets no cookies,
   but the AdSense code can set Google cookies (such as `__gads`) on this domain. Contact is a `mailto:` link and the
   Upwork profile.
